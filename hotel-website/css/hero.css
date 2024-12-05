@@ -1,0 +1,58 @@
+/* Ensure the carousel container takes full screen */
+.hotel-carousel-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; /* Full viewport height */
+  width: 100vw;  /* Full viewport width */
+}
+
+/* Ensure carousel inner container takes the full screen */
+.hotel-carousel-inner {
+  position: relative;
+  height: 100%;  /* Full height to cover entire screen */
+  width: 100%;  /* Full width to cover entire screen */
+}
+
+/* Ensure the images fully cover the screen, maintaining aspect ratio */
+.hotel-carousel-item img {
+  width: 100%; /* Stretch to fill the width */
+  height: 100vh; /* Stretch to fill the height */
+  object-fit: cover; /* Ensure the image covers the container */
+  object-position: center; /* Center the image in case it’s cropped */
+}
+
+/* Styling for the carousel captions */
+.hotel-carousel-caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the caption */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
+  padding: 20px;
+  width: 80%; /* Optional: limit the caption width */
+  max-width: 600px; /* Prevent overly large captions on wide screens */
+  border-radius: 5px;
+  z-index: 10; /* Ensure the caption stays above the image */
+}
+
+/* Style for heading in carousel caption */
+.hotel-carousel-caption h5 {
+  font-size: 2.5rem; /* Adjusted font size for responsiveness */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Slight letter spacing for readability */
+  margin-bottom: 15px; /* Space between heading and paragraph */
+}
+
+/* Style for text in carousel caption */
+.hotel-carousel-caption p {
+  font-size: 1.3rem; /* Slightly smaller text for consistency */
+  font-weight: 400;
+  line-height: 1.5; /* Improve line spacing */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
+}

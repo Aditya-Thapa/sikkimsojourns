@@ -1,0 +1,91 @@
+/* General navbar styling */
+.navigation-navbar {
+  padding: 1rem 0;
+  width: 100%;
+  transition: all 0.3s ease;
+  position: sticky; /* Stick to the top when scrolling */
+  top: 0;
+  z-index: 1000; /* Ensure navbar stays on top */
+}
+
+/* Flexbox layout for the navbar */
+.navigation-navbar .container {
+  display: flex;
+  justify-content: space-between; /* Ensures space between logo and nav items */
+  align-items: center; /* Vertically aligns the items */
+}
+
+/* Navbar brand logo styling */
+.navigation-navbar-logo {
+  max-height: 40px; /* Adjust to a reasonable size */
+  width: auto; /* Maintain aspect ratio */
+  transition: max-height 0.3s ease; /* Smooth transition when resizing */
+}
+
+/* Navbar links styling */
+.navigation-navbar-nav {
+  display: flex; /* Flexbox to align nav items horizontally */
+  justify-content: flex-end; /* Align items to the right */
+  margin-left: 0; /* Remove extra margin on the left */
+  padding-left: 0; /* Remove default left padding */
+}
+
+.navigation-nav-item {
+  list-style: none; /* Remove default list styling */
+}
+
+.navigation-nav-link {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #f8f9fa !important;
+  transition: color 0.3s ease;
+  margin-left: 1.5rem; /* Space between items */
+}
+
+.navigation-nav-link:hover,
+.navigation-nav-link:focus {
+  color: #ffc107 !important;
+  text-decoration: none;
+}
+
+/* Mobile navbar toggle button */
+.navigation-navbar-toggler {
+  border-color: #fff;
+}
+
+.navigation-navbar-toggler-icon {
+  background-color: #fff;
+}
+
+/* Sticky Navbar Background Change */
+.navigation-sticky-navbar {
+  background-color: rgba(0, 0, 0, 0.9); /* Darker background when sticky */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for floating effect */
+}
+
+/* Responsive styling */
+@media (max-width: 991px) {
+  .navigation-navbar-nav {
+    margin-top: 1rem;
+  }
+
+  .navigation-nav-item {
+    margin-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .navigation-nav-link {
+    font-size: 1.2rem;
+  }
+
+  .navigation-navbar-logo {
+    max-height: 35px; /* Reduce logo size for mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .navigation-navbar-logo {
+    max-height: 30px; /* Further reduce the logo size on very small screens */
+  }
+}

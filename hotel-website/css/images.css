@@ -1,0 +1,18 @@
+/* ============================================
+   6. Image Styling
+   ============================================ */
+   img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .shadow-lg {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  

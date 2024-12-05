@@ -1,0 +1,57 @@
+/* General Styling for Navbar */
+.navbar-container {
+  position: relative;
+}
+
+.navbar {
+  background-color: #343a40; /* Dark navbar background */
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center; /* Center logo and text vertically */
+  justify-content: center;
+}
+
+/* Styling for the Logo and Logo Container */
+.logo-container {
+  background-color: #ffffff; /* White background for the logo */
+  border-radius: 8px; /* Rounded corners */
+  padding: 5px; /* Padding around the logo */
+  display: inline-block;
+  height: 60px; /* Fixed height for the logo container */
+  width: auto;
+  display: flex;
+  align-items: center; /* Vertically center the logo */
+  justify-content: center; /* Center logo horizontally */
+}
+
+/* Ensure logo image fills container while maintaining aspect ratio */
+.logo-img {
+  height: 100%; /* Fill the container's height */
+  width: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for the Navbar Brand Text */
+.navbar-brand-name {
+  margin-left: 15px; /* Space between logo and text */
+  font-size: 1.5rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Mobile View */
+@media (max-width: 767px) {
+  .logo-container {
+    height: 50px; /* Adjust container height for mobile */
+  }
+
+  .logo-img {
+    height: 100%; /* Ensure logo fills the height */
+  }
+
+  .navbar-brand-name {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
+}
