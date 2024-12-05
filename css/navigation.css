@@ -35,7 +35,7 @@
 }
 
 .navigation-nav-link {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
   color: #f8f9fa !important;
@@ -68,24 +68,34 @@
 @media (max-width: 991px) {
   .navigation-navbar-nav {
     margin-top: 1rem;
+    justify-content: center; /* Center items in mobile */
   }
 
   .navigation-nav-item {
     margin-left: 0;
     margin-bottom: 1rem;
+    text-align: center; /* Center text in items */
   }
 
   .navigation-nav-link {
-    font-size: 1.2rem;
+    font-size: 13px;
   }
 
   .navigation-navbar-logo {
     max-height: 35px; /* Reduce logo size for mobile */
+  }
+
+  .navigation-navbar-toggler {
+    display: block; /* Ensure toggler is visible on mobile */
   }
 }
 
 @media (max-width: 576px) {
   .navigation-navbar-logo {
     max-height: 30px; /* Further reduce the logo size on very small screens */
+  }
+
+  .navigation-nav-link {
+    font-size: 10px; /* Adjust font size for smaller screens */
   }
 }
