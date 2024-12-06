@@ -43,58 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Navigation Toggler
-  const toggler = document.querySelector('.sikkim-new-toggler');
-  const navLinks = document.querySelector('.sikkim-new-links');
+  // Get the toggle button and the navbar links for mobile menu
+  const toggleButton = document.querySelector('.sikkim-new-toggler');
+  const navbarLinks = document.querySelector('.sikkim-new-links');
 
-  if (toggler && navLinks) {
-    toggler.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
-      toggler.classList.toggle('open'); // Optional: Add an open class for toggler animation
-    });
-  }
-
-  // Carousel Setup
-  function initializeCarousel(carouselId, interval = 5000) {
-    const carouselElement = document.getElementById(carouselId);
-    if (carouselElement) {
-      new bootstrap.Carousel(carouselElement, {
-        interval,
-        ride: 'carousel',
-      });
-    }
-  }
-
-  // Initialize carousels
-  initializeCarousel('hotelCarousel');
-  initializeCarousel('sikkim-sojourns-about-carousel');
-
-  // Swipe Gesture for Carousel
-  const carouselInner = document.getElementById('carousel-inner');
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  function handleSwipeGesture() {
-    const carouselInstance = new bootstrap.Carousel('#hotelCarousel');
-    if (touchEndX < touchStartX) {
-      // Swipe left, go to next item
-      carouselInstance.next();
-    }
-    if (touchEndX > touchStartX) {
-      // Swipe right, go to previous item
-      carouselInstance.prev();
-    }
-  }
-
-  if (carouselInner) {
-    carouselInner.addEventListener('touchstart', (e) => {
-      e.preventDefault(); // Prevent default touch behavior (scrolling)
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    carouselInner.addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipeGesture();
-    });
-  }
+  // Add event listener for toggle button click
+  toggleButton.addEventListener('click', () => {
+    // Toggle the 'active' class to show or hide the navigation links
+    navbarLinks.classList.toggle('active');
+  });
 });

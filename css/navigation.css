@@ -88,7 +88,7 @@
   }
 
   .sikkim-new-links {
-    display: none;
+    display: none; /* Initially hidden */
     flex-direction: column;
     position: absolute;
     top: 60px;
@@ -101,7 +101,7 @@
   }
 
   .sikkim-new-links.active {
-    display: flex;
+    display: flex; /* When active, show the menu */
   }
 
   .sikkim-new-nav-items {
