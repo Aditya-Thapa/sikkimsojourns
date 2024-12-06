@@ -1,57 +1,75 @@
-/* General Styling for Navbar */
+/* General Navbar Styling */
 .navbar-container {
-  position: relative;
+  background-color: #003366;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.navbar {
-  background-color: #343a40; /* Dark navbar background */
-}
-
-/* Navbar Brand */
+/* Navbar Branding */
 .navbar-brand {
   display: flex;
-  align-items: center; /* Center logo and text vertically */
-  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
-/* Styling for the Logo and Logo Container */
-.logo-container {
-  background-color: #ffffff; /* White background for the logo */
-  border-radius: 8px; /* Rounded corners */
-  padding: 5px; /* Padding around the logo */
-  display: inline-block;
-  height: 60px; /* Fixed height for the logo container */
-  width: auto;
-  display: flex;
-  align-items: center; /* Vertically center the logo */
-  justify-content: center; /* Center logo horizontally */
-}
-
-/* Ensure logo image fills container while maintaining aspect ratio */
 .logo-img {
-  height: 100%; /* Fill the container's height */
-  width: auto; /* Maintain aspect ratio */
+  height: 50px;
+  width: auto;
 }
 
-/* Styling for the Navbar Brand Text */
 .navbar-brand-name {
-  margin-left: 15px; /* Space between logo and text */
-  font-size: 1.5rem;
   color: white;
+  margin-left: 10px;
   font-weight: bold;
+  font-size: 20px;
 }
 
-/* Mobile View */
-@media (max-width: 767px) {
-  .logo-container {
-    height: 50px; /* Adjust container height for mobile */
+/* Navbar Links */
+.navbar-nav {
+  margin-left: auto;
+}
+
+.nav-item {
+  margin-left: 20px;
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #1C4E80;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .navbar-toggler {
+    border: none;
   }
 
-  .logo-img {
-    height: 100%; /* Ensure logo fills the height */
+  .navbar-collapse {
+    flex-grow: 0;
   }
 
-  .navbar-brand-name {
-    font-size: 1.2rem; /* Smaller font size for mobile */
+  .navbar-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 0;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 14px;
   }
 }

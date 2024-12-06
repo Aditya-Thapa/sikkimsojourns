@@ -47,9 +47,34 @@ document.addEventListener('DOMContentLoaded', () => {
   const toggleButton = document.querySelector('.sikkim-new-toggler');
   const navbarLinks = document.querySelector('.sikkim-new-links');
 
-  // Add event listener for toggle button click
-  toggleButton.addEventListener('click', () => {
-    // Toggle the 'active' class to show or hide the navigation links
-    navbarLinks.classList.toggle('active');
+  // Ensure elements are present before attaching event listener
+  if (toggleButton && navbarLinks) {
+    toggleButton.addEventListener('click', () => {
+      // Toggle the 'active' class to show or hide the navigation links
+      navbarLinks.classList.toggle('active');
+    });
+  }
+
+  // Get references to the toggler button and navigation links container (if needed elsewhere)
+  const toggler = document.querySelector('.sikkim-new-toggler');
+  const navLinks = document.getElementById('navbarNav');
+  
+  // Attach event listener for toggling navigation visibility
+  if (toggler && navLinks) {
+    toggler.addEventListener('click', function() {
+      navLinks.classList.toggle('active');
+    });
+  }
+});
+// Wait for the DOM to fully load before attaching event listeners
+document.addEventListener('DOMContentLoaded', function() {
+  // Get references to the toggler button and navigation links container
+  const toggler = document.querySelector('.navbar-toggler');
+  const navLinks = document.getElementById('navbarNav');
+
+  // Add a click event listener to the toggler button
+  toggler.addEventListener('click', function() {
+    // Toggle the 'collapse' class to show or hide the navigation menu
+    navLinks.classList.toggle('collapse');
   });
 });

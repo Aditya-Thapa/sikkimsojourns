@@ -25,7 +25,7 @@
 }
 
 .hotel-carousel-caption {
-  top: 10%; /* Adjust the vertical positioning of the caption */
+  top: 30%; /* Adjust the vertical positioning of the caption */
   background: rgba(0, 0, 0, 0.5); /* Light black overlay with transparency */
   color: white; /* White text color to contrast with the dark background */
   padding: 15px 20px; /* Adjust padding for better spacing */
@@ -33,7 +33,7 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   max-width: 90%; /* Ensure the caption width doesn't exceed the carousel width */
   width: auto; /* Make width flexible */
-  height: 30%; /* Let the height adjust based on content */
+  height: 40%; /* Let the height adjust based on content */
   
 }
 
@@ -54,9 +54,10 @@
   }
 
   .hotel-carousel-caption {
-    top: 20%; /* Adjust the vertical positioning of the caption */
+    top: 10%; /* Adjust the vertical positioning of the caption */
     width: 80%; /* Make the caption smaller on mobile */
     padding: 10px 15px; /* Adjust padding for smaller screens */
+    height: 85%; /* Let the height adjust based on content */
   }
 
   /* Ensure buttons are still visible on mobile */
