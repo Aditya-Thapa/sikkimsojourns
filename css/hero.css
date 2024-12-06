@@ -1,96 +1,67 @@
-/* Ensure the carousel container takes full screen */
-.hotel-carousel-container {
-  position: relative;
-  overflow: hidden;
-  height: 100vh; /* Full viewport height */
-  width: 100vw;  /* Full viewport width */
-}
-
-/* Ensure carousel inner container takes the full screen */
-.hotel-carousel-inner {
-  position: relative;
-  height: 100%;  /* Full height to cover entire screen */
-  width: 100%;  /* Full width to cover entire screen */
-}
-
-/* Ensure the images fully cover the screen, maintaining aspect ratio */
-.hotel-carousel-item img {
-  width: 100%; /* Stretch to fill the width */
-  height: 100vh; /* Stretch to fill the height */
-  object-fit: cover; /* Ensure the image covers the container */
-  object-position: center; /* Center the image in case it’s cropped */
-}
-
-/* Styling for the carousel captions */
-.hotel-carousel-caption {
+/* Ensure the buttons are visible and work on all screen sizes */
+.hotel-carousel-control-prev,
+.hotel-carousel-control-next {
+  height: 11%;
+  width: 11%;
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* Center the caption */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text visibility */
-  padding: 20px;
-  width: 80%; /* Optional: limit the caption width */
-  max-width: 600px; /* Prevent overly large captions on wide screens */
-  border-radius: 5px;
-  z-index: 10; /* Ensure the caption stays above the image */
+  z-index: 5;
+  border: none;
+  padding: 10px;
+  font-size: 1.0rem;
+  color: #121010;
+  border-radius: 80%;
+  transform: translateY(-50%);
+  transition: background-color 0.3s ease;
+  box-shadow: none !important; /* Removes any shadow effect from the buttons */
 }
 
-/* Style for heading in carousel caption */
-.hotel-carousel-caption h5 {
-  font-size: 2.5rem; /* Adjusted font size for responsiveness */
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px; /* Slight letter spacing for readability */
-  margin-bottom: 15px; /* Space between heading and paragraph */
+.hotel-caption-title {
+  font-size: 4rem; /* Adjust font size for mobile */
 }
 
-/* Style for text in carousel caption */
-.hotel-carousel-caption p {
-  font-size: 1.3rem; /* Slightly smaller text for consistency */
-  font-weight: 400;
-  line-height: 1.5; /* Improve line spacing */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Text shadow for better contrast */
+.hotel-caption-text {
+  font-size: 2rem; /* Adjust font size for mobile */
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
+.hotel-carousel-caption {
+  top: 20%; /* Adjust the vertical positioning of the caption */
+  background: rgba(0, 0, 0, 0.5); /* Light black overlay with transparency */
+  color: white; /* White text color to contrast with the dark background */
+  padding: 15px 20px; /* Adjust padding for better spacing */
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  max-width: 90%; /* Ensure the caption width doesn't exceed the carousel width */
+  width: auto; /* Make width flexible */
+  height: 30%; /* Let the height adjust based on content */
+  
+}
+
+/* Ensure buttons are still visible on mobile */
+.hotel-carousel-control-prev,
+.hotel-carousel-control-next {
+  display: block; /* Ensure buttons are always visible */
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 767px) {
+  .hotel-caption-title {
+    font-size: 2rem; /* Adjust font size for mobile */
+  }
+
+  .hotel-caption-text {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
   .hotel-carousel-caption {
-    width: 90%; /* Make captions take up more space on smaller screens */
-    padding: 15px;
+    top: 40%; /* Adjust the vertical positioning of the caption */
+    width: 80%; /* Make the caption smaller on mobile */
+    padding: 10px 15px; /* Adjust padding for smaller screens */
   }
 
-  .hotel-carousel-caption h5 {
-    font-size: 2rem; /* Slightly smaller heading */
-  }
-
-  .hotel-carousel-caption p {
-    font-size: 1.1rem; /* Smaller text for mobile */
-  }
-
-  .hotel-carousel-item img {
-    height: 60vh; /* Reduce image height on small screens */
-  }
-}
-
-@media (max-width: 576px) {
-  .hotel-carousel-caption {
-    padding: 10px;
-  }
-
-  .hotel-carousel-caption h5 {
-    font-size: 1.8rem; /* Further reduce heading size */
-  }
-
-  .hotel-carousel-caption p {
-    font-size: 1rem; /* Adjust paragraph text size */
-  }
-
-  .hotel-carousel-item img {
-    height: 50vh; /* Further reduce image height for small screens */
+  /* Ensure buttons are still visible on mobile */
+  .hotel-carousel-control-prev,
+  .hotel-carousel-control-next {
+    display: block; /* Ensure buttons are always visible */
   }
 }

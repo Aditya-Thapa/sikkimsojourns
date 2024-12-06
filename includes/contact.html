@@ -1,12 +1,49 @@
+<!-- Include Contact Section Styles -->
 <link rel="stylesheet" href="css/contact.css">
-<section id="contact" class="py-5 bg-light">
-  <div class="container text-center">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" class="form-control mb-3" placeholder="Your Name" required>
-      <input type="email" class="form-control mb-3" placeholder="Your Email" required>
-      <textarea class="form-control mb-3" placeholder="Your Message" required></textarea>
-      <button type="submit" class="cta-btn btn btn-primary">Send Message</button>
-    </form>
+
+<section id="contact" class="contact-section py-5 bg-light">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-md-6">
+        <div class="contact-section__info">
+          <h2 class="contact-section__title">Contact Us</h2>
+          <p class="contact-section__description">We’d love to hear from you! Feel free to get in touch with us for any inquiries or feedback.</p>
+          
+          <!-- Contact Cards -->
+          <div class="contact-section__cards">
+            <div class="contact-section__card">
+              <h4 class="contact-section__card-title">Our Address</h4>
+              <p class="contact-section__card-text">1234 Luxury Street, Suite 567, Cityville, State 12345</p>
+            </div>
+            <div class="contact-section__card">
+              <h4 class="contact-section__card-title">Phone</h4>
+              <p class="contact-section__card-text">+1 (123) 456-7890</p>
+            </div>
+            <div class="contact-section__card">
+              <h4 class="contact-section__card-title">Email</h4>
+              <p class="contact-section__card-text">contact@hotel.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="contact-section__form">
+          <h4 class="contact-section__form-title">Send us a message</h4>
+          <form>
+            <input type="text" class="contact-section__input form-control mb-3" placeholder="Your Name" required>
+            <input type="email" class="contact-section__input form-control mb-3" placeholder="Your Email" required>
+            <textarea class="contact-section__input form-control mb-3" placeholder="Your Message" required></textarea>
+            <button type="submit" class="contact-section__btn cta-btn btn btn-primary">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- Include Bootstrap JS and Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>

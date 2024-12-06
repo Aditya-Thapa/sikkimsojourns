@@ -1,101 +1,123 @@
-/* General navbar styling */
-.navigation-navbar {
-  padding: 1rem 0;
-  width: 100%;
-  transition: all 0.3s ease;
-  position: sticky; /* Stick to the top when scrolling */
-  top: 0;
-  z-index: 1000; /* Ensure navbar stays on top */
-}
-
-/* Flexbox layout for the navbar */
-.navigation-navbar .container {
+/* General Navigation Styling */
+.sikkim-new-navbar {
+  background-color: #003366;
   display: flex;
-  justify-content: space-between; /* Ensures space between logo and nav items */
-  align-items: center; /* Vertically aligns the items */
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Navbar brand logo styling */
-.navigation-navbar-logo {
-  max-height: 40px; /* Adjust to a reasonable size */
-  width: auto; /* Maintain aspect ratio */
-  transition: max-height 0.3s ease; /* Smooth transition when resizing */
+.sikkim-new-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-/* Navbar links styling */
-.navigation-navbar-nav {
-  display: flex; /* Flexbox to align nav items horizontally */
-  justify-content: flex-end; /* Align items to the right */
-  margin-left: 0; /* Remove extra margin on the left */
-  padding-left: 0; /* Remove default left padding */
-}
-
-.navigation-nav-item {
-  list-style: none; /* Remove default list styling */
-}
-
-.navigation-nav-link {
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  color: #f8f9fa !important;
-  transition: color 0.3s ease;
-  margin-left: 1.5rem; /* Space between items */
-}
-
-.navigation-nav-link:hover,
-.navigation-nav-link:focus {
-  color: #ffc107 !important;
+/* Logo Styling */
+.sikkim-new-logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
 }
 
-/* Mobile navbar toggle button */
-.navigation-navbar-toggler {
-  border-color: #fff;
+.sikkim-new-logo-img {
+  height: 50px;
+  width: auto;
 }
 
-.navigation-navbar-toggler-icon {
-  background-color: #fff;
+/* Toggler for Mobile View */
+.sikkim-new-toggler {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-/* Sticky Navbar Background Change */
-.navigation-sticky-navbar {
-  background-color: rgba(0, 0, 0, 0.9); /* Darker background when sticky */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow for floating effect */
+.sikkim-new-toggler-icon {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 5px 0;
 }
 
-/* Responsive styling */
-@media (max-width: 991px) {
-  .navigation-navbar-nav {
-    margin-top: 1rem;
-    justify-content: center; /* Center items in mobile */
+/* Navigation Links */
+.sikkim-new-links {
+  display: flex;
+}
+
+.sikkim-new-nav-items {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.sikkim-new-nav-item {
+  margin: 0;
+}
+
+.sikkim-new-nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sikkim-new-nav-link:hover {
+  color: #1C4E80;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .sikkim-new-toggler {
+    display: block;
   }
 
-  .navigation-nav-item {
-    margin-left: 0;
-    margin-bottom: 1rem;
-    text-align: center; /* Center text in items */
+  .sikkim-new-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #003366;
+    width: calc(100% - 40px);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    padding: 10px 0;
   }
 
-  .navigation-nav-link {
-    font-size: 13px;
+  .sikkim-new-links.active {
+    display: flex;
   }
 
-  .navigation-navbar-logo {
-    max-height: 35px; /* Reduce logo size for mobile */
-  }
-
-  .navigation-navbar-toggler {
-    display: block; /* Ensure toggler is visible on mobile */
+  .sikkim-new-nav-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 }
 
+/* Small Screens */
 @media (max-width: 576px) {
-  .navigation-navbar-logo {
-    max-height: 30px; /* Further reduce the logo size on very small screens */
+  .sikkim-new-nav-link {
+    font-size: 14px;
   }
 
-  .navigation-nav-link {
-    font-size: 10px; /* Adjust font size for smaller screens */
+  .sikkim-new-logo-img {
+    height: 40px;
   }
 }

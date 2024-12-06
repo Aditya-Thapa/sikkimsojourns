@@ -1,11 +1,27 @@
+<!-- Include Booking Section Styles -->
 <link rel="stylesheet" href="css/booking.css">
-<section id="booking" class="py-5">
-  <div class="container text-center">
-    <h2>Book Your Stay</h2>
-    <form action="book-room.html" method="POST">
-      <input type="date" name="check-in" class="form-control mb-3" required>
-      <input type="date" name="check-out" class="form-control mb-3" required>
-      <button type="submit" class="cta-btn btn btn-primary">Reserve Now</button>
-    </form>
+
+<section id="booking" class="py-5 booking-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto text-center">
+        <h2 class="booking-section__title">Book Your Stay</h2>
+        <p class="booking-section__description mb-4">Plan your perfect getaway and secure your stay with us. Choose your dates and book now!</p>
+        
+        <form action="book-room.html" method="POST" class="booking-section__form">
+          <div class="form-row">
+            <div class="col-md-6 mb-3">
+              <input type="date" name="check-in" class="booking-section__input form-control" required>
+              <label for="check-in" class="booking-section__label">Check-in</label>
+            </div>
+            <div class="col-md-6 mb-3">
+              <input type="date" name="check-out" class="booking-section__input form-control" required>
+              <label for="check-out" class="booking-section__label">Check-out</label>
+            </div>
+          </div>
+          <button type="submit" class="booking-section__btn cta-btn btn btn-primary">Reserve Now</button>
+        </form>
+      </div>
+    </div>
   </div>
 </section>
